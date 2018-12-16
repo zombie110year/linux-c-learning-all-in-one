@@ -1,7 +1,12 @@
 Linux C编程一站式学习
 #####################
 
-.. include:: 前言.rst
+.. toctree::
+    :maxdepth: 2
+    :numbered:
+    :caption: 前言
+
+    前言
 
 .. toctree::
     :maxdepth: 2
@@ -9,6 +14,7 @@ Linux C编程一站式学习
     :caption: C语言入门
 
     程序的基本概念
+    常量-变量和表达式
 
 .. toctree::
     :maxdepth: 2
