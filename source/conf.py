@@ -177,3 +177,4 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
+imgmath_image_format = "svg"
