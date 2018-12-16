@@ -132,7 +132,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Linux-C编程一站式学习.tex', 'Linux C编程一站式学习',
+    (master_doc, name_en+".tex", 'Linux C编程一站式学习',
      author, 'manual'),
 ]
 
