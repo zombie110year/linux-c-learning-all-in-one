@@ -20,10 +20,10 @@
 # -- Project information -----------------------------------------------------
 
 import sphinx_rtd_theme
-project = 'Linux C编程一站式学习'
-copyright = '2018, 宋劲杉, Zombie110year'
-author = '宋劲杉, Zombie110year'
-name_en = 'linux-c-learning-all-in-one'
+project = u'Linux C编程一站式学习'
+copyright = u'2008-2018, 宋劲杉, Zombie110year'
+author = u'宋劲杉, Zombie110year'
+name_en = u'linux-c-learning-all-in-one'
 
 # The short X.Y version
 version = ''
@@ -132,7 +132,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, name_en+".tex", 'Linux C编程一站式学习',
+    (master_doc, name_en+".tex", project,
      author, 'manual'),
 ]
 
@@ -142,7 +142,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, name_en, 'Linux C编程一站式学习',
+    (master_doc, name_en, project,
      [author], 1)
 ]
 
@@ -153,8 +153,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, name_en, 'Linux C编程一站式学习',
-     author, name_en, 'Linux C 编程一站式学习',
+    (master_doc, name_en, project,
+     author, name_en, project,
      'Miscellaneous'),
 ]
 
