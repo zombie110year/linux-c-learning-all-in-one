@@ -60,7 +60,7 @@
 
 总结一下编译执行的过程，首先你用文本编辑器写一个C程序，然后保存成一个文件，例如program.c（通常C程序的文件名后缀是.c），这称为源代码（Source Code） 或源文件，然后运行编译器对它进行编译，编译的过程并不执行程序，而是把源代码全部翻译成机器指令，再加上一些描述信息，生成一个新的文件，例如a.out，这称为可执行文件，可执行文件可以被操作系统加载运行，计算机执行该文件中由编译器生成的指令，如下图所示：
 
-.. image:: _static/intro.compile.png
+.. image:: _images/intro.compile.png
     :width: 600px
     :name: 编译执行的过程
     :alt: 编译执行的过程
@@ -91,7 +91,7 @@
     $ echo $VAR
     2
 
-.. image:: _static/intro.interpret.png
+.. image:: _images/intro.interpret.png
     :width: 600px
     :name: 解释执行的过程
     :alt: 解释执行的过程
