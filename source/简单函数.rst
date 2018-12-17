@@ -405,7 +405,15 @@ Side Effect这个概念也适用于运算符组成的表达式。比如 ``a + b`
 
 我们在 ``main`` 函数中调用 ``increment`` 增加变量 i 和 j 的值，这样能奏效吗？为什么？
 
+.. note:: Zombie110year
+
+    并不能. 因为在调用 ``increment`` 时, 传入的值会在 ``increment`` 的作用域中创建一个新的内存区域. 实际上, 在 ``increment`` 中的 ``i`` 和在 ``main`` 中的 ``i`` 并不是同一块内存. 由于 ``increment`` 没有返回值, 那么在调用结束后, 内部的变量就被直接销毁了.
+
 2、如果在一个程序中调用了 ``printf`` 函数却不包含头文件，例如 ``int main(void) { printf("\n"); }``，编译时会报警告： ``warning: incompatible implicit declaration of built-in function ‘printf’``。请分析错误原因。
+
+.. note:: Zombie110year
+
+    由于没有引用 ``stdio.h``, 因此, 编译器找不到 ``printf`` 标识符的定义, 就算默认链接了 ``libc.so``, 也不知道该执行哪一段机器码. 编译器在编译过程中, 会对其进行检查, 因此报错.
 
 全局变量、局部变量和作用域
 ==========================
