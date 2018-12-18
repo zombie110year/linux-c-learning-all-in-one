@@ -475,4 +475,4 @@ switch 语句不是必不可缺的，显然可以用一组 ``if ... else if ... 
 
 .. note:: Zombie110year
 
-    一般来讲, 超过三个以上的 if-else 分支就可以考虑重构成 switch, 如果分支更多, 那么可以考虑做成一个 :ref:`条件映射表` (Map)
+    一般来讲, 超过三个以上的 if-else 分支就可以考虑重构成 switch, 如果分支更多, 那么可以考虑做成一个 :ref:`条件映射表` (Map) TODO:
