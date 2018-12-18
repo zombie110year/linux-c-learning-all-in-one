@@ -454,7 +454,7 @@ switch 语句可以产生具有多个分支的控制流程。它的格式是::
 例如以下程序根据传入的参数 1~7 分别打印 Monday~Sunday：
 
 .. image:: _images/cond.switch1.png
-    :name: switch语句
+    :name: switch-语句
     :alt: switch 语句
     :height: 600px
     :align: center
