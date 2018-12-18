@@ -285,6 +285,8 @@ return语句
 
 .. seealso:: 软件工程中, 是怎么进行测试的呢?
 
+.. _递归:
+
 递归
 ====
 
@@ -400,13 +402,31 @@ frabjuous
 
 Euclid算法是很容易证明的，请读者自己证明一下为什么这么算就能算出最大公约数。最后，修改你的程序使之适用于所有整数，而不仅仅是正整数。
 
+.. note:: Zombie110year
+
+    .. literalinclude:: _code/gcd.recursive.c
+        :language: c
+        :lines: 3-11
+        :name: gcd.recursive
+        :caption: gcd.recursive.c
+
 2、编写递归函数求Fibonacci数列的第n项，这个数列是这样定义的：
 
-.. code-block:: c
+.. math::
 
-    fib(0)=1
-    fib(1)=1
-    fib(n)=fib(n-1)+fib(n-2)
+    \begin{cases}
+        fib(0)=1 \\
+        fib(1)=1 \\
+        fib(n)=fib(n-1)+fib(n-2)
+    \end{cases}
+
+.. note:: Zombie110year
+
+    .. literalinclude:: _code/fibonacci.recursive.c
+        :language: c
+        :lines: 3-12
+        :name: fibonacci.recursive
+        :caption: fibonacci.recursive.c
 
 上面两个看似毫不相干的问题之间却有一个有意思的联系：
 
