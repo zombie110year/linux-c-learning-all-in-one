@@ -283,7 +283,7 @@ return语句
     :alt: 函数的分层设计
     :align: center
 
-.. seealso:: 软件工程中, 是怎么进行测试的呢?
+.. seealso:: 软件工程中, 是怎么进行测试的呢? TODO:
 
 .. _递归:
 
@@ -331,8 +331,9 @@ frabjuous
 
 ``factorial`` 这个函数居然可以 **自己调用自己** ？是的。自己直接或间接调用自己的函数称为 **递归函数** 。这里的 ``factorial`` 是直接调用自己，有些时候函数 A 调用函数 B ，函数 B 又调用函数 A ，也就是函数 A 间接调用自己，这也是递归函数。如果你觉得迷惑，可以把 ``factorial(n-1)`` 这一步看成是在调用另一个函数－－另一个有着相同函数名和相同代码的函数，调用它就是跳到它的代码里执行，然后再返回 ``factorial(n-1)`` 这个调用的下一步继续执行。我们以 ``factorial(3)`` 为例分析整个调用过程，如下图所示：
 
+.. _factorial(3)的调用过程:
+
 .. image:: _images/func2.factorial.png
-    :name: factorial(3)的调用过程
     :alt: factorial(3)的调用过程
     :align: center
 
