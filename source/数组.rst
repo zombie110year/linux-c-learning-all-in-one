@@ -569,7 +569,7 @@ C标准库中生成伪随机数的是 ``rand`` 函数，使用这个函数需要
 
 
 .. code-block:: c
-    :name: 多维字符数组
+    :name: 多维字符数组-code
     :caption: 多维字符数组
 
     #include <stdio.h>
@@ -595,7 +595,7 @@ C标准库中生成伪随机数的是 ``rand`` 函数，使用这个函数需要
 
 .. image:: _images/array.multichar.png
     :name: 多维字符数组
-    :caption: 多维字符数组
+    :alt: 多维字符数组
     :align: center
 
 这个程序中定义了一个多维字符数组 ``char days[8][10]`` ;，为了使 1~7 刚好映射到 ``days[1]`` ~ ``days[7]`` ，我们把 ``days[0]`` 空出来不用，所以第一维的长度是 8 ，为了使最长的字符串"Wednesday"能够保存到一行，末尾还能多出一个Null字符的位置，所以第二维的长度是10。

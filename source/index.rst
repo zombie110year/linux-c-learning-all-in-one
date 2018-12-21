@@ -48,6 +48,8 @@ C语言入门
     数组
     编码风格
     gdb
+    排序与查找
+    栈与队列
 
 C语言本质
 =========
@@ -72,3 +74,7 @@ Linux系统编程
     :maxdepth: 2
     :numbered:
     :caption: 附录
+
+    字符编码
+    license
+    references
