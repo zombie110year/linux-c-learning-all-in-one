@@ -21,7 +21,7 @@
 
 import sphinx_rtd_theme
 project = u'Linux C编程一站式学习'
-copyright = u'2008-2018, 宋劲杉, Zombie110year'
+copyright = u'2008-2019, 宋劲杉, Zombie110year'
 author = u'宋劲杉, Zombie110year'
 name_en = u'linux-c-learning-all-in-one'
 

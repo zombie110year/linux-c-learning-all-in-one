@@ -1,3 +1,4 @@
+#####################
 Linux C编程一站式学习
 #####################
 
@@ -25,56 +26,11 @@ Permission is granted to copy, distribute and/or modify this document under the 
 
 .. toctree::
     :maxdepth: 2
-    :numbered:
     :caption: 前言
 
     前言
-
-C语言入门
-=========
-
-.. toctree::
-    :maxdepth: 2
-    :numbered:
-    :caption: C语言入门
-
-    程序的基本概念
-    常量-变量和表达式
-    简单函数
-    分支语句
-    深入理解函数
-    循环语句
-    结构体
-    数组
-    编码风格
-    gdb
-    排序与查找
-    栈与队列
-
-C语言本质
-=========
-
-.. toctree::
-    :maxdepth: 2
-    :numbered:
-    :caption: C语言本质
-
-Linux系统编程
-=============
-
-.. toctree::
-    :maxdepth: 2
-    :numbered:
-    :caption: Linux系统编程
-
-附录
-====
-
-.. toctree::
-    :maxdepth: 2
-    :numbered:
-    :caption: 附录
-
-    字符编码
-    license
-    references
+    入门/index
+    本质/index
+    Linux/index
+    stdlib/index
+    附录/index
