@@ -414,8 +414,8 @@ indent工具可以把代码格式化成某种风格，例如把 :ref:`缺少缩�
 
 .. code-block:: c
 
-    $ indent -kr -i8 main.c
-    $ cat main.c
+    // $ indent -kr -i8 main.c
+    // $ cat main.c
     #include <stdio.h>
     #include <stdlib.h>
     #include <time.h>

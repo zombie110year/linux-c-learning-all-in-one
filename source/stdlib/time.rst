@@ -107,7 +107,7 @@ time.h 头文件提供了与时间日期相关的类型, 函数, 结构体.
 
     将 timer 解析为 tm 结构体, 使用 UTC 时区(格林威治时间)
 
-.. c:fucntion:: struct tm* localtime(time_t *timer)
+.. c:function:: struct tm* localtime(time_t *timer)
 
     将 timer 解析为 tm 结构体, 使用 本地 时区
 
@@ -134,7 +134,7 @@ time.h 头文件提供了与时间日期相关的类型, 函数, 结构体.
     %a          星期缩写                                Thu
     %B          月份名称                                March
     %c          完整的日期时间表示
-    %I          12 小时制小时 (01-12)  const struct tm *restrict __tp                 12
+    %I          12 小时制小时 (01-12)                   12
     %j          一年的第几天 (01-366)
     %p          AM 或 PM                                AM
     %U          一年的第几周 (00-53) 以第一个星期日开始
