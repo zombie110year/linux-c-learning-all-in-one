@@ -4,7 +4,24 @@ C 标准库
 
 对于 Linux 系统, 标准库头文件处于目录
 ``/usr/include`` 之下.
-对应的链接库则位于 ``/lib/x86_64-linux-gnu/libc-2.27.so``
+对应的链接库则位于 ``/lib/x86_64-linux-gnu/libc.so.6``.
+
+实际上这是个符号链接, 指向了 ``/lib/x86_64-linux-gnu/libc-2.27.so``.
+估计和操作系统的版本有关系.
+
+libc 一般都可执行以显示版本信息::
+
+    $ /lib/x86_64-linux-gnu/libc.so.6
+
+    GNU C Library (Debian GLIBC 2.27-3) stable release version 2.27.
+    Copyright (C) 2018 Free Software Foundation, Inc.
+    This is free software; see the source for copying conditions.
+    There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+    PARTICULAR PURPOSE.
+    Compiled by GNU CC version 7.3.0.
+    libc ABIs: UNIQUE IFUNC
+    For bug reporting instructions, please see:
+    <http://www.debian.org/Bugs/>.
 
 从路径上可以看出不同的 CPU 架构会影响系统存放库文件的路径.
 
