@@ -162,3 +162,4 @@ time.h 头文件提供了与时间日期相关的类型, 函数, 结构体.
 
 .. literalinclude:: _code/time.show.c
     :linenos:
+    :language: c
