@@ -14,11 +14,9 @@
 生成文档
     Doxygen 或 Sphinx-doc
 构建工具
-
     -   Make: 处理 Makefile
     -   CMake: 为跨平台的 C/C++ 程序项目生成 Makefile.
     -   Autotools: Autoconf, Automake, libtool. GNU 世界的 Makefile 生成器.
-
 非标准库
     libcURL, libGLib, libGSL, libSQLite3, libXML2, GNU Argp.
 

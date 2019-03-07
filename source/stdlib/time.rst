@@ -146,10 +146,13 @@ time.h 头文件提供了与时间日期相关的类型, 函数, 结构体.
     %Z          时区.
     =========== ======================================= ========
 
-    :param char *str: 将生成的字符串存入目标字符数组.
+    :param str: 将生成的字符串存入目标字符数组.
+    :type str: char *
     :param size_t maxsize: 最大可写入的字符数, 一般传入字符数组的长度.
-    :param char *fmt: 格式字符串.
-    :param struct tm *tp: 存储日期时间信息的 tm 结构体.
+    :param fmt: 格式字符串.
+    :type fmt: char *
+    :param tp: 存储日期时间信息的 tm 结构体.
+    :type tp: struct :c:type:`tm` *
     :return: 如果写入的字符数(包括结束符)小于 maxsize,
         则返回去除结束符的写入字符数. 否则返回 0.
     :rtype: size_t
