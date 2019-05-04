@@ -7,12 +7,6 @@ stdlib.h
 宏
 ==
 
-.. c:macro:: NULL
-
-    空指针, 指向 0 地址::
-
-        #define NULL ((void *) 0)
-
 .. c:macro:: EXIT_FAILURE
 
     当程序出错时, 调用 :c:func:`exit` 传入此值::
