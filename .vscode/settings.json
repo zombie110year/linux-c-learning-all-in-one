@@ -1,0 +1,12 @@
+{
+    "todo-tree.includedWorkspaces": [
+        "source"
+    ],
+    "todo-tree.regex": "((//|/\\*|\\.\\.)\\s*($TAGS))",
+    "todo-tree.tags": [
+        "TODO",
+        "todo",
+        "fixme",
+        "FIXME"
+    ]
+}
