@@ -62,5 +62,5 @@
 *.out
 *.app
 
-.vscode
+.vscode/ipch
 build
