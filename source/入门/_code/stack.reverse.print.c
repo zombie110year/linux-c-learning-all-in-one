@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-// TODO help
+
 typedef struct {
   int top;      // 栈的当前层数
   int length;   // 栈的最大深度
@@ -35,7 +35,7 @@ int main(int argc, char const *argv[]) {
 }
 
 int push(char_stack_t *stack, char item) {
-  if (stack->top < stack->length) {
+  if (stack->top < stack->length - 1) {
       // 入栈前, 先向后运动一位
     ++stack->top;
     stack->body[stack->top] = item;

@@ -5,7 +5,6 @@ C语言入门
 .. toctree::
     :maxdepth: 2
     :numbered:
-    :caption: C语言入门
 
     程序的基本概念
     常量-变量和表达式
