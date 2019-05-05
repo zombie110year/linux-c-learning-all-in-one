@@ -64,3 +64,4 @@
 
 .vscode/ipch
 build
+*.log
