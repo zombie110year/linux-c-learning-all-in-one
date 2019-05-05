@@ -26,9 +26,9 @@ author = u'宋劲杉, Zombie110year'
 name_en = u'linux-c-learning-all-in-one'
 
 # The short X.Y version
-version = ''
+version = '0.1.0'
 # The full version, including alpha/beta/rc tags
-release = ''
+release = 'rc'
 
 
 # -- General configuration ---------------------------------------------------
@@ -43,6 +43,7 @@ release = ''
 extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
+    'sphinx.ext.graphviz',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
