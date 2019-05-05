@@ -1,71 +1,73 @@
+/**
+ * 插入排序
+ */
+#include "readarray.h" // 引入 readarray 函数, 用于从 10int.array 中获取数据
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
-size_t gCOUNT = 1; // 为了和子序列的长度相配合, 这里就设定为 1 吧
-const size_t gLENGTH = 5;
+// typedef struct {
+//     int length;
+//     int *body;
+// } array_t;
 
 /**
  * 打印目标数组的情况
+ *
+ *  :param array: 将处理的数组
+ *  :param counter: 计数器, 记录当前为第几次处理
  */
-void printArray(int* array, size_t length)
-{
-    printf("%2I64d: ", gCOUNT); // %I64d 是 size_t 类型的格式符
-    for (size_t i = 0; i < length; i++) {
-        printf("%3d, ", *(array + i));
-    }
-    printf("\n");
+void printArray(const array_t *array, int counter) {
+  printf("%2d: ", counter);
+  for (size_t i = 0; i < array->length; i++) {
+    printf("%3d, ", *(array->body + i));
+  }
+  printf("\n");
 }
 
 /**
- * 使用插入法将数组排序为从小到大的序列
+ *  使用插入法将数组排序为从小到大的序列
+ *  将序列划分为 "已排序", "未排序" 两个部分
+ *
+ *  1. 从未排序部分选中一个基准位值
+ *  2. 在已排序部分从后向前依次选择, 将元素向后挪, 当找到一个比此位小的值,
+ *     则 将 key 插入到此值之后
+ *  3. 将已排序部分向后伸展一位
+ *
+ *  :param array: 要处理的数组, 此结构体指针在整个程序中不会指向其他位置
+ *  :param counter: 计数器, 一次调用增加一
  */
-void insertion_sort(int* array, size_t length)
-{
-    int key;
-    int i;
+void insertion_sort(const array_t *array, int *counter) {
+  int key;          // 选择基准位值
+  int sorted_i = 0; // 已排序部分的索引
+  int j;            // 当前操作位置
 
-    for (int j = 1; j < length; j++) {
-        printArray(array, length);
-
-        // 选中数组中的一个元素, 从第 1 位开始, 因为如果选 0 开始, 根本没有地方插
-        key = array[j];
-
-        for (i = j - 1; i >= 0; i--) { // 这里是 i--, 从右到左遍历, 遍历范围是 0 -> j - 1
-            if (array[i] > key) {
-                // 因为当前元素比 key 大, 所以把它向后挪, 在前方为较小的 key 腾出位置
-                array[i + 1] = array[i];
-            } else {
-                // 找到了一个 <= key 的, 插在它后面
-                break;
-            }
-        }
-        /**
-         * 如果是 break 来的
-         *     那么说明在中间找到了比 key 小的值, 0<= i < j, i+1 为选中位置的后面
-         * 如果是 遍历完了
-         *     说明所有 key 前面的值都比它大, 且所有其他元素都向后挪动一位, 因此插在当前位置
-         */
-        array[i + 1] = key;
-
-        gCOUNT++; // 全局计数器, 计算插入次数
+  while (sorted_i < array->length && *counter < 1000) { // 防止失败而陷入死循环
+    printArray(array, *counter);
+    (*(counter))++;
+    // 选出未排序部分中的一个元素
+    key = array->body[sorted_i];
+    // 在已排序部分中进行比较
+    for (j = sorted_i; j > 0; --j) {
+      if (array->body[j] < key) {
+        array->body[j + 1] = key;
+        ++sorted_i; // 成功排序一位
+        break;
+      } else {
+        array->body[j] = array->body[j - 1];
+      }
     }
-    printArray(array, length);
+    // 如果排到了头部, 则说明 key 在已排序部分最小, 将他插到第一位
+    if (j == 0) {
+      array->body[j] = key;
+      ++sorted_i; // 成功排序一位
+    }
+  }
 }
 
-int main(int argc, char const* argv[])
-{
-    srand(time(NULL));
-    size_t length = gLENGTH;
-    int array[length];
-    for (size_t i = 0; i < length; i++) {
-        array[i] = rand() % 100;
-    }
-    if (length == 5) {
-        // 当 LENGTH 设为 5 时打印的表格
-        printf("     00   01   02   03   04\n");
-        printf(" --  --   --   --   --   --\n");
-    }
-    insertion_sort(array, length);
-    return 0;
+int main(void) {
+  array_t array;
+  int counter = 0;
+  readarray("10int.array", &array);
+  insertion_sort(&array, &counter);
+  printArray(&array, -1);
+  return 0;
 }
