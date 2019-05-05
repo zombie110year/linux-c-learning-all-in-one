@@ -10,20 +10,6 @@
 // } array_t;
 
 /**
- * 打印目标数组的情况
- *
- *  :param array: 将处理的数组
- *  :param counter: 计数器, 记录当前为第几次处理
- */
-void printArray(const array_t *array, int counter) {
-  printf("%2d: ", counter);
-  for (size_t i = 0; i < array->length; i++) {
-    printf("%3d, ", *(array->body + i));
-  }
-  printf("\n");
-}
-
-/**
  *  使用插入法将数组排序为从小到大的序列
  *  将序列划分为 "已排序", "未排序" 两个部分
  *
@@ -41,7 +27,7 @@ void insertion_sort(const array_t *array, int *counter) {
   int j;            // 当前操作位置
 
   while (sorted_i < array->length && *counter < 1000) { // 防止失败而陷入死循环
-    printArray(array, *counter);
+    printarray(array, *counter);
     (*(counter))++;
     // 选出未排序部分中的一个元素
     key = array->body[sorted_i];
@@ -68,6 +54,6 @@ int main(void) {
   int counter = 0;
   readarray("10int.array", &array);
   insertion_sort(&array, &counter);
-  printArray(&array, -1);
+  printarray(&array, -1);
   return 0;
 }
